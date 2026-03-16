@@ -1,10 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [contador, setContador] = useState(1);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Marcador</Text>
+
+      {/**para mostrar o state */}
+      <Text>{contador}</Text>
+      <View style={{ flexDirection: 'row', marginTop: 10, gap: 10 }}>
+        <Button onPress={() => setContador(contador + 1)} title='+' />
+        <Button onPress={() => setContador(contador - 1)} title='-' /></View>
       <StatusBar style="auto" />
     </View>
   );
