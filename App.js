@@ -20,6 +20,10 @@ export default function App() {
             <Button onPress={() => setPlay(play + 1)} title='+' />
             <Button onPress={() => setPlay(play - 1)} title='-' /></View>
           <StatusBar style="auto" />
+      <Button onPress={() => setPlay(play + 3)} title='TRUCO'/>
+      <Button onPress={() => setPlay(play + 6)} title='SEIS'/>
+      <Button onPress={() => setPlay(play + 9)} title='NOVE'/>
+      <Button onPress={() => setPlay(play + 12)} title='DOZE'/>
         </View>
         <View>
         <Text style={{margin:'auto'}}>ELES</Text>
@@ -28,6 +32,10 @@ export default function App() {
           <Button onPress={() => setPlayTwo(playTwo + 1)} title='+' />
           <Button onPress={() => setPlayTwo(playTwo - 1)} title='-' /></View>
         <StatusBar style="auto" />
+      <Button onPress={() => setPlayTwo(playTwo + 3)} title='TRUCO'/>
+      <Button onPress={() => setPlayTwo(playTwo + 6)} title='SEIS'/>
+      <Button onPress={() => setPlayTwo(playTwo + 9)} title='NOVE'/>
+      <Button onPress={() => setPlayTwo(playTwo + 12)} title='DOZE'/>
       </View>
       </View>
     </View>
