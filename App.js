@@ -8,6 +8,19 @@ export default function App() {
   const [vitoriaPlay, setVitoriaPlay] = useState(0);
   const [vitoriaPlayTwo, setVitoriaPlayTwo] = useState(0);
 
+  function diminuirContador() {
+    if (play > 0) {
+
+      setPlay(play - 1);
+    }
+  }
+  function diminuirContador2() {
+    if (playTwo > 0) {
+
+      setPlayTwo(playTwo - 1);
+    }
+  }
+
 
   function adicionarPonto(pontos) {
 
@@ -44,7 +57,7 @@ export default function App() {
           <View style={{ flexDirection: 'row', marginTop: 10, gap: 10 }}>
             <Button onPress={() => adicionarPonto(1)} title='+' />
 
-            <Button onPress={() => setPlay(play - 1)} title='-' /></View>
+            <Button onPress={() => { diminuirContador }} title='-' /></View>
 
           <StatusBar style="auto" />
 
@@ -73,7 +86,7 @@ export default function App() {
             <Button onPress={() => adicionarPontoEles(1)} title='+' />
 
 
-            <Button onPress={() => setPlayTwo(playTwo - 1)} title='-' /></View>
+            <Button onPress={() => { diminuirContador2 }} title='-' /></View>
           <StatusBar style="auto" />
 
           <Button onPress={() => adicionarPontoEles(3)} title='TRUCO' />
@@ -85,6 +98,11 @@ export default function App() {
           <Button onPress={() => adicionarPontoEles(12)} title='DOZE' />
         </View>
       </View>
+      <View>
+
+      <Button onPress={() => { setPlay(0); setPlayTwo(0) }} title='REINICIAR'/>
+      <Button onPress={() => { setPlay(0); setPlayTwo(0); setVitoriaPlay(0); setVitoriaPlayTwo(0) }} title="NOVO JOGO" />
+    </View>
     </View>
 
   );
